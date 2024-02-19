@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pauline PC Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="x-icon" href="https://raw.githubusercontent.com/PauCatapang/Pictures/main/icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg-color: #403434;
+            --second-bg-color: #301f1f;
+            --text-color: #fff;
+            --second-color: #ccc;
+            --main-color: #e0785c;
+            --big-font: 5rem;
+            --h2-font: 3rem;
+            --p-font: 1.1rem;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            padding: 22px 15%;
+            border-bottom: 1px solid transparent;
+            transition: all .45s ease;
+        }
+
+        .logo {
+            color: var(--text-color);
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        span {
+            color: var(--main-color);
+        }
+
+        .navlist {
+            display: flex;
+        }
+
+        .navlist a {
+            color: var(--second-color);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 25px;
+            transition: all .45s ease;
+        }
+
+        .navlist a:hover {
+            color: var(--main-color);
+        }
+
+        .navlist a.active {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 35px;
+            color: var(--text-color);
+            z-index: 10001;
+            cursor: pointer;
+            margin-left: 25px;
+            display: none;
+        }
+
+        section {
+            padding: 160px 15% 120px;
+        }
+
+        .home {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-color: #301f1f;
+            /* background-image: url(https://raw.githubusercontent.com/PauCatapang/Photos/main/pj.png);*/
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-text {
+            text-align: center;
+        }
+
+        .slide {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .one {
+            display: inline-block;
+            text-align: center;
+            margin-right: 15px;
+            height: 32px;
+            padding: 0 15px;
+            line-height: 32px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 5px;
+            background: var(--main-color);
+            color: var(--text-color);
+        }
+
+        .two {
+            display: inline-block;
+            text-align: center;
+            color: var(--second-color);
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .home-text h1 {
+            text-align: center;
+            font-size: var(--big-font);
+            font-weight: 700;
+            color: var(--text-color);
+            list-style: 1.1;
+            margin: 0 0 3px;
+        }
+
+        .home-text h3 {
+            color: var(--text-color);
+            text-align: center;
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .home-text p {
+            text-align: center;
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-icons i {
+            height: 45px;
+            width: 45px;
+            background: var(--main-color);
+            color: var(--text-color);
+            font-size: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            /*margin-right: 15px;*/
+            transition: all .45s ease;
+        }
+
+        .contact-icons i:hover {
+            background: var(--text-color);
+            color: var(--main-color);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--main-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: all .45s ease;
+        }
+
+        .btn:hover {
+            transform: scale(0.9);
+        }
+
+        .btn2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-left: 35px;
+        }
+
+        .btn2 span i {
+            height: 55px;
+            width: 55px;
+            background: var(--main-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: all .45s ease;
+        }
+
+        .btn2 span i:hover {
+            transform: scale(1.1) translate(5px);
+        }
+
+        header.sticky {
+            background: var(--bg-color);
+            border-bottom: 1px solid #ffffff1a;
+            padding: 12px 15%;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .about-img {
+            max-width: 530px;
+            height: auto;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .about-text h2 {
+            font-size: var(--h2-font);
+            line-height: 1;
+        }
+
+        .about-text h4 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 15px 0 30px;
+        }
+
+        .about-text p {
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 1.8;
+            margin-bottom: 4rem;
+        }
+
+        .education {
+            background-color: var(--second-bg-color);
+        }
+
+        .main-text {
+            text-align: center;
+        }
+
+        .main-text h2 {
+            font-size: var(--h2-font);
+            line-height: 1;
+        }
+
+        .resume {
+            background-color: var(--second-bg-color);
+            padding: 120px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .resume .resume-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .resume-row .column .sub-heading {
+            color: var(--resume-color);
+            padding: 0px 0px 20px 30px;
+        }
+
+        .column .resume-contents {
+            padding-left: 30px;
+            border-left: 2px solid var(--second-color);
+        }
+
+        .resume-contents .box {
+            position: relative;
+            padding: 20px;
+            margin-bottom: 1vh;
+            border-bottom: 5px solid var(--second-color);
+            border-radius: 5px;
+            background-color: var(--bg-color);
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .resume-contents .box:nth-child(3) {
+            border-bottom: 0px;
+        }
+
+        .resume-contents .box::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 14px;
+            background-color: var(--second-color);
+            top: 21px;
+            left: -30px;
+        }
+
+        .resume-contents .box::after {
+            content: '';
+            position: absolute;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--second-color);
+            top: 21px;
+            left: -18px;
+        }
+
+        .resume-contents .box h4 {
+            position: relative;
+            color: var(--main-color);
+        }
+
+        .resume-contents .box h3 {
+            font-size: 19px;
+            padding: 10px 0px 6px;
+            color: var(--text-color);
+            margin-top: 2px;
+        }
+
+        .resume-contents .box p {
+            margin-top: 3px;
+            line-height: 1.3;
+            color: var(--second-color);
+            font-size: 15px;
+        }
+
+        .resume-contents .box h5 {
+            position: relative;
+            margin-top: 12px;
+            right: 0;
+            text-align: right;
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 30px 10%;
+            background: var(--about-color);
+            display: grid;
+            align-content: center;
+        }
+
+        .container .main-title {
+            max-width: 700px;
+            margin: 0px auto;
+            text-align: center;
+            font-family: helvetica;
+        }
+
+        .container .main-title h1 {
+            position: relative;
+            font-size: 40px;
+            color: #242223;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .container .main-title h1::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 125%;
+            left: 0;
+            background-color: #808080;
+        }
+
+        .container .main-title h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: #d03645;
+            top: calc(125% - 1px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .main-title p {
+            color: var(--progress-bar);
+        }
+
+        .subject {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--progress-bar);
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .progress-line {
+            position: absolute;
+            width: 0%;
+            height: 7px;
+            background-color: var(--main-color);
+            border-radius: 15px;
+            top: -1px;
+            animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+        }
+
+
+        .progress-bar::after {
+            position: absolute;
+            content: attr(value);
+            top: -35px;
+            right: 0;
+            color: var(--main-color);
+            font-size: 18px;
+        }
+
+        .progress-line::after {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            background-color: var(--main-color);
+        }
+
+
+        .container.flex-center {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        .portfolio {
+            background-color: var(--second-bg-color);
+        }
+
+        .portfolio-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(305px, auto));
+            ;
+            align-items: center;
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .row {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .row img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(72, 20, 20, 0.607), #4f2a1f06);
+            position: absolute;
+            border-radius: 8px;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 40px;
+            transition: height 0.5s;
+        }
+
+        .layer h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .layer p {
+            color: var(--second-color);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .layer i {
+            color: var(--main-color);
+            margin-top: 20px;
+            font-size: 20px;
+            background: var(--text-color);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .row:hover img {
+            transform: scale(1.1);
+        }
+
+        .row:hover .layer {
+            height: 100%;
+        }
+
+        /*.contact {
+            background: var(--second-bg-color);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .contact-text h4 {
+            color: var(--text-color);
+            margin: 18px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .contact-text h2 {
+            font-size: var(--h2-font);
+            line-height: 1;
+        }
+
+        .contact-text p {
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .list {
+            margin-bottom: 2.8rem;
+        }
+
+        .list li {
+            margin-bottom: 12px;
+        }
+
+        .list li a {
+            display: block;
+            color: var(--second-color);
+            font-size: 14px;
+            transition: all .45s ease;
+        }
+
+        .list li a:hover {
+            color: var(--text-color);
+            transform: translateX(5px);
+        }
+
+        
+
+        .contact-form form {
+            position: relative;
+        }
+
+        .contact-form form input,
+        form textarea {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: none;
+            outline: none;
+            font-size: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 240px;
+        }
+
+        .contact-form .submit {
+            display: inline-block;
+            font-size: 16px;
+            background: var(--main-color);
+            color: var(--text-color);
+            width: 160px;
+            transition: all .45s ease;
+        }
+
+        .contact-form .submit:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }*/
+
+        .last {
+            padding: 20px 15%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            background: var(--bg-color);
+        }
+
+        .last-text p {
+            color: var(--second-color);
+            font-size: 14px;
+        }
+
+        .top i {
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 15px;
+            color: var(--text-color);
+            background: var(--main-color);
+        }
+
+        @media (max-width: 1480px) {
+            header {
+                padding: 12px 2.5%;
+                transition: .1s;
+            }
+
+            header.sticky {
+                padding: 10px 2.5%;
+                transition: .1s;
+            }
+
+            section {
+                padding: 110px 3% 60px;
+            }
+
+            .end {
+                padding: 15px 3%;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            :root {
+                --big-font: 4rem;
+                --h2-font: 2.5rem;
+                --p-font: 1rem;
+                transition: .1s;
+            }
+
+            .home-text h3 {
+                font-size: 2.5rem;
+            }
+
+            .home {
+                height: 87vh;
+            }
+        }
+
+        @media (max-width: 920px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                text-align: center;
+                order: 2;
+            }
+
+            .about-img img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 840px) {
+            #menu-icon {
+                display: block;
+            }
+
+            .navlist {
+                position: absolute;
+                top: -1000px;
+                right: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                background: var(--bg-color);
+                text-align: left;
+                transition: all .45s ease;
+            }
+
+            .navlist a {
+                display: block;
+                margin: 17px;
+                font-size: 20px;
+                transition: all .45s ease;
+                color: var(--text-color);
+            }
+
+            .navlist a:hover {
+                color: var(--main-color);
+            }
+
+            .navlist a.active {
+                color: var(--text-color);
+            }
+
+            .navlist.open {
+                top: 100%;
+            }
+        }
+    </style>
+
+
+
+<body>
+    <header class="sticky">
+        <a href="#" class="logo">Pau<span>l</span>ine</a>
+
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!----home design section-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <div class="slide">
+                <span class="one">Hello</span>
+                <span class="two">I'm</span>
+            </div>
+            <h1>Pauline Jane Catapang</h1>
+            <h3>Information Technology Student | <span>UI/UX Designer</span> | Front-End Developer</h3>
+            <p>A basic layout designer. Web Designer. Entreprenuer. An IT Student.</p>
+            <div class="button">
+                <div class="contact-icons">
+                    <a href="https://www.facebook.com/pjctpng/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://twitter.com/pjctpng"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/pjctpng/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/in/paulinecatapang/"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!----about design section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="https://raw.githubusercontent.com/PauCatapang/Photos/main/pau.png">
+        </div>
+
+        <div class="about-text">
+            <h2>About <span>Pau</span></h2>
+            <h4>UI/UX Designer</h4>
+            <p>Pauline Jane Pamplona Catapang, a resident of Barangay Gonzales
+                in Tanauan City, Batangas. She is enrolled in the BS Information Technology
+                degree at the Polytechnic University of the Philippines - Sto. Tomas Branch. 
+                At the age of 17, she began honing her photographic talents. Later, she learned
+                how to construct layouts that are more simple yet elegant.</p>
+            <a href="#portfolio" class="btn">View Works</a>
+        </div>
+    </section>
+
+    <!----education design section-->
+    <section class="resume reusable" id="education">
+        <h9 style="font-size: var(--h2-font);
+        line-height: 1; font-weight: 700; margin-bottom: 7vh;">Education <span>and</span> Experience</h9>
+
+        <div class="resume-row">
+            <div class="column column-left">
+                <div class="sub-heading">
+                    <h2>EDUCATION</h2>
+                </div>
+                <main class="resume-contents">
+
+                    <div class="box">
+                        <h4>2018 - 2020</h4>
+                        <h3>Technical Vocational and Livelihood - Information Communications and Technology</h3>
+                        <p>Pursuing the field of Information Communications and Technology track on my Senior High School level
+                            became my stepping stone on enhancing my skills in the world of technology. I was exposed in the field 
+                            of hardware, software, and networks during this level.
+                        </p>
+                        <h5 class="vanue">Nova Schola Tanauan</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2020 - present</h4>
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <p>I become more exposed and practiced in the field of information technology on my college level.
+                            I also had learned the other fields of this path such as cybersecurity, web development, software testing,
+                            and web design. 
+                        </p>
+                        <h5 class="vanue">Polytechnic University of the Philippines</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2023 - present</h4>
+                        <h3>Google Developer Students Club (GDSC)</h3>
+                        <p>It has been a rewarding experience for me to take part in Google Developer Student Clubs (GDSC). 
+                            It has helped me to expand my abilities as a flexible and future-ready developer while working with 
+                            like-minded people, learning from professionals in the field, and investigating cutting-edge 
+                            technology.</p>
+                        <h5 class="vanue">Polytechnic University of the Philippines</h5>
+                    </div>
+                </main>
+            </div>
+
+            <div class="column column-right">
+                <div class="sub-heading">
+                    <h2>EXPERIENCE</h2>
+                </div>
+                <main class="resume-contents">
+                    <div class="box">
+                        <h4>2023 - present</h4>
+                        <h3>UI/UX Designer</h3>
+                        <p>It was a rewarding experience to work as the UI/UX designer on our capstone project. 
+                            I improved my ability to create user-friendly interfaces and gave user-centric design
+                            top priority. My enthusiasm for UI/UX design has been stoked by this experience, 
+                            which has also given me priceless skills for my future career aspirations in the 
+                            industry.</p>
+                        <h5 class="vanue">Capstone Project</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2022- 2023</h4>
+                        <h3>UI/UX Designer</h3>
+                        <p>My ability to develop user interfaces and user experiences was greatly improved throughout 
+                            our hackathon. I improved my capacity to quickly prototype and iterate designs while giving 
+                            user demands top priority while working under duress. Working collaboratively with colleagues, 
+                            I acquired priceless expertise in resolving issues and modifying designs to fulfill project 
+                            objectives on short notice. This incident served as a reminder of how crucial agility and user 
+                            empathy are to producing memorable user experiences.</p>
+                        <h5 class="vanue">GDSC Hackathon</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2022 - 2022</h4>
+                        <h3>Design Head Committee</h3>
+                        <p>Leading a committee during a general assembly of our organization has helped me excercise my skills
+                            as a designer. Being considerate with the tiniest detail for the overall look of the event.
+                        </p>
+                        <h5 class="vanue">Computer Society</h5>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-title">
+            <h2 style="font-size: var(--h2-font);
+            margin-bottom: 25px;">Sk<span>i</span>lls</h2>
+            <p>Programming and Technical Skills</p>
+        </div>
+
+        <div class="row">
+            <section class="col" id="skills">
+                <div class="sub-title">
+                    <h2>Programming Skills</h2>
+                </div>
+
+                <div class="skills-container">
+
+                    <div class="skill">
+                        <div class="subject">HTML</div>
+                        <div class="progress-bar" value="85%">
+                            <div class="progress-line" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">CSS</div>
+                        <div class="progress-bar" value="85%">
+                            <div class="progress-line" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">JavaScript</div>
+                        <div class="progress-bar" value="70%">
+                            <div class="progress-line" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Responsive Design</div>
+                        <div class="progress-bar" value="60%">
+                            <div class="progress-line" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="col">
+
+                <div class="sub-title">
+                    <h2>Technical Skills</h2>
+                </div>
+
+                <div class="skills-container">
+
+                    <div class="skill">
+                        <div class="subject">Figma</div>
+                        <div class="progress-bar" value="90%">
+                            <div class="progress-line" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Canva</div>
+                        <div class="progress-bar" value="95%">
+                            <div class="progress-line" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Microsoft Office</div>
+                        <div class="progress-bar" value="95%">
+                            <div class="progress-line" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Video Editing</div>
+                        <div class="progress-bar" value="85%">
+                            <div class="progress-line" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!----portfolio design section-->
+    <section class="portfolio" id="portfolio">
+        <div class="main-text">
+            <p>Portfolio</p>
+            <h2><span>Latest</span> Accomplishments</h2>
+        </div>
+
+        <div class="portfolio-content">
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/1.png">
+                <div class="layer">
+                    <h5>Logo Designs</h5>
+                    <p>Designs for logo.</p>
+                    <a
+                        href="https://www.canva.com/design/DAE_Vvb6M1E/VQnQGIkoCT77BNQXdxU-Hw/view?utm_content=DAE_Vvb6M1E&utm_campaign=designshare&utm_medium=link&utm_source=editor"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/2.png">
+                <div class="layer">
+                    <h5>Iris App UI Design</h5>
+                    <p>UI Design for an innovative app required as one of our projects during 3rd year.</p>
+                    <a
+                        href="https://www.canva.com/design/DAE_VDIab7Y/0VIjoemnTyi6mMDn5FMr9w/watch?utm_content=DAE_VDIab7Y&utm_campaign=designshare&utm_medium=link&utm_source=editor"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/3.png">
+                <div class="layer">
+                    <h5>Wrap & Carry App UI Design</h5>
+                    <p>UI Design for a proposal app for one of the whole-sale grocery store in Tanauan City, which is a
+                        required project during our 3rd year-level.</p>
+                    <a
+                        href="https://www.canva.com/design/DAE_C7F5h9g/yuoVoAZl3hN6-ZmNGeA1TA/view?utm_content=DAE_C7F5h9g&utm_campaign=designshare&utm_medium=link&utm_source=editor"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/4.png">
+                <div class="layer">
+                    <h5>App Proposal's UI/UX Design</h5>
+                    <p>Detailed context for Iris and Wrap & Carry UI/UX design and app proposal.</p>
+                    <a href="https://layoutdesign.my.canva.site/application-proposal-presentation"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/5.png">
+                <div class="layer">
+                    <h5>LAKBAY.ph</h5>
+                    <p>UI Design for Lakbay.ph, a travel app. </p>
+                    <a href="https://layoutdesign.my.canva.site/lakbayph"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/6.png">
+                <div class="layer">
+                    <h5>Koyn's</h5>
+                    <p>Financial App proposal</p>
+                    <a href="https://layoutdesign.my.canva.site/koyns"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/7.png">
+                <div class="layer">
+                    <h5>Chat Bud</h5>
+                    <p>Messaging App Design and Proposal</p>
+                    <a href="https://layoutdesign.my.canva.site/welcome-to-chat-bud"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/8.png">
+                <div class="layer">
+                    <h5>Smartwatch UI Design</h5>
+                    <p>UI Design for a smartwatch, also for a smartwatch app propsal.</p>
+                    <a href="https://layoutdesign.my.canva.site/smartwatch-project"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/9.png">
+                <div class="layer">
+                    <h5>E-Ligtas</h5>
+                    <p>UI Design for a disaster app made for desktop view.</p>
+                    <a
+                        href="https://www.canva.com/design/DAF9D71_nrM/7IkebZmgtHaW6Xvia3MdKg/view?utm_content=DAF9D71_nrM&utm_campaign=designshare&utm_medium=link&utm_source=editor"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/9.png">
+                <div class="layer">
+                    <h5>E-Ligtas</h5>
+                    <p>Disater App proposal pitched for Tucklas Hackathon hosted by Google Developer Science Club -
+                        PUPSTB.</p>
+                    <a href="https://layoutdesign.my.canva.site/e-ligtas"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/10.png">
+                <div class="layer">
+                    <h5>Web Portfolio</h5>
+                    <p>Web portofolio created and submitted as one of the project requirements.</p>
+                    <a href="https://layoutdesign.my.canva.site/pauline-portfolio"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/PauCatapang/Pictures/main/11.png">
+                <div class="layer">
+                    <h5>Tanauan Iskonnect</h5>
+                    <p>Web-Based Scholarship system, our capstone project.</p>
+                    <a href="http://tisconnect.free.nf/"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----lastslide design section-->
+    <section class="last">
+        <div class="last-text">
+            <p>Copyright © 2022 by Pauline Catapang All Rights Reserved.</p>
+        </div>
+
+        <div class="top">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector('header');
+        window.addEventListener("scroll", function () {
+            header.classList.toggle("sticky", window.scrollY > 100);
+        });
+
+        let menu = document.querySelector('#menu-icon');
+        let navlist = document.querySelector('.navlist');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navlist.classList.toggle('open');
+        };
+
+        window.onscroll = () => {
+            menu.classList.remove('bx-x');
+            navlist.classList.remove('open');
+        };
+    </script>
+</body>
+</head>
+
+</html>
